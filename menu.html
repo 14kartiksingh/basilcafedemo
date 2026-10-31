@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Seasonal Menu & Provisions | Basil Café & Restaurant</title>
+  <meta name="description" content="Explore the complete seasonal provisions at Basil Café: extraction lab coffees, hand-whisked matchas, hearth pizzas, dosas, curries and confections.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md border-b border-primary-container/15">
+  <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-space-sm" aria-label="Basil Café Home">
+      <img alt="Basil Café Logo" class="h-8 w-auto object-contain" src="assets/images/brand/logo_basil.png">
+      <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Basil Café</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-space-lg">
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="index.html">Home</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="our-story.html">Our Story</a>
+      <a aria-current="page" class="transition-colors py-1 text-primary font-title-md font-semibold border-b-2 border-primary" href="menu.html">Menu</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="gallery.html">Gallery</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="contact.html">Contact &amp; Visit</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-surface-container font-label-md text-label-md px-space-md py-space-sm hover:bg-primary transition-colors" href="contact.html">Reserve a Table</a>
+      <a href="contact.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary-container transition-colors" aria-label="Visit Concierge">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container transition-colors" aria-label="Open navigation menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-surface-container z-50 shadow-2xl transition-transform duration-300 transform translate-x-full lg:hidden flex flex-col justify-between p-6 overflow-y-auto">
+  <div class="flex flex-col gap-6">
+    <div class="flex items-center justify-between pb-4 border-b border-primary-container/15">
+      <div class="flex items-center gap-2">
+        <img alt="Basil Café Logo" class="h-7 w-auto object-contain" src="assets/images/brand/logo_basil.png">
+        <span class="font-headline-sm text-primary">Basil Café</span>
+      </div>
+      <button id="mobile-drawer-close" class="p-1.5 rounded-lg text-primary hover:bg-surface-container-high transition-colors" aria-label="Close menu">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-1.5">
+      <a href="index.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Home</a>
+      <a href="our-story.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Our Story</a>
+      <a href="menu.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors bg-primary-container text-surface-container font-semibold">Seasonal Menu</a>
+      <a href="gallery.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Visual Gallery</a>
+      <a href="contact.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Contact &amp; Visit</a>
+    </nav>
+  </div>
+  <div class="pt-6 border-t border-primary-container/15 flex flex-col gap-4">
+    <a href="contact.html" class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-surface-container font-label-md py-3 hover:bg-primary transition-colors shadow-sm">
+      Reserve a Table
+    </a>
+    <div class="flex flex-col gap-1 text-on-surface-variant font-caption">
+      <p class="font-medium text-primary">Shop 1 &amp; 2, 48 New Road, Dehradun</p>
+      <p>Daily: 10:00 AM – 10:30 PM</p>
+      <a href="tel:+917300776850" class="text-secondary font-medium hover:underline">+91 73007 76850</a>
+    </div>
+  </div>
+</aside>
+
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+<!-- Menu Header & Editorial Masthead -->
+<section class="w-full px-margin-mobile lg:px-margin pt-space-xl pb-space-lg bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-md">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<span class="font-label-caps text-label-caps tracking-widest uppercase text-secondary">Autumn / Winter Edition • No. 04</span>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-primary">schedule</span>
+<span class="">Service Daily: 10:00 – 22:30</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<h1 class="font-display text-display text-primary tracking-tight">Seasonal Provisions &amp; Pours</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+            Handcrafted daily from sunrise. All eggs free-range, grains heritage and stone-milled, coffee ethically sourced from micro-lot farms across Huila and Yirgacheffe.
+          </p>
+</div>
+<!-- Live Dietary Filter Bar / Indicator Controls -->
+<div class="lg:col-span-4 flex flex-col gap-space-sm bg-surface-container p-space-md rounded-xl shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-primary font-semibold tracking-wider">Dietary Filter Key</span>
+<button class="text-caption font-caption text-on-surface-variant hover:text-primary transition-colors underline hidden" id="clear-dietary-filter">Reset Filter</button>
+</div>
+<div class="flex flex-wrap gap-2" id="dietary-pills-container">
+<button class="filter-pill active px-3 py-1 rounded-full text-caption font-caption font-medium bg-primary text-on-primary transition-all" data-filter="all">
+              All Items
+            </button>
+<button class="filter-pill px-3 py-1 rounded-full text-caption font-caption font-medium bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all flex items-center gap-1" data-filter="V">
+<span class="font-bold text-secondary">V</span> Vegetarian
+            </button>
+<button class="filter-pill px-3 py-1 rounded-full text-caption font-caption font-medium bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all flex items-center gap-1" data-filter="VG">
+<span class="font-bold text-secondary">VG</span> Plant-based
+            </button>
+<button class="filter-pill px-3 py-1 rounded-full text-caption font-caption font-medium bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all flex items-center gap-1" data-filter="GF">
+<span class="font-bold text-secondary">GF</span> Gluten-Free
+            </button>
+<button class="filter-pill px-3 py-1 rounded-full text-caption font-caption font-medium bg-surface-container-high text-on-surface hover:bg-secondary-container transition-all flex items-center gap-1" data-filter="DF">
+<span class="font-bold text-secondary">DF</span> Dairy Free
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sticky Category Navigation Bar -->
+<nav class="sticky top-20 z-40 w-full bg-surface/95 backdrop-blur-md shadow-sm py-space-sm">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md overflow-x-auto no-scrollbar">
+<div class="flex items-center gap-2 min-w-max" id="category-nav">
+<a class="category-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#specials">Curated Specials</a>
+<a class="category-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#coffee-espresso">Coffee &amp; Espresso</a>
+<a class="category-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#tea-botanicals">Tea &amp; Botanicals</a>
+<a class="category-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#bakehouse-brunch">Morning Bakehouse &amp; Brunch</a>
+<a class="category-link px-4 py-2 rounded-full font-label-md text-label-md text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors" href="#sweet-finishes">Sweet Finishes</a>
+</div>
+<div class="hidden lg:flex items-center gap-2 text-on-surface-variant text-caption font-caption shrink-0">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span class="">Kitchen active until 22:00</span>
+</div>
+</div>
+</nav>
+<!-- Signature Specials Banner: Split Editorial Feature -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-low" id="specials">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="w-8 h-px bg-tertiary"></span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-tertiary">Editor's Daily Selection</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Chef &amp; Barista Signatures</h2>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-space-lg">
+<!-- Special 1 -->
+<article class="menu-item-card flex flex-col md:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-md group hover:shadow-xl transition-all duration-300" data-dietary="GF">
+<div class="md:w-5/12 h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Steaming artisan ceramic cup containing orange blossom honey latte dusted with finely ground green cardamom sugar, sitting on raw unpolished limestone counter beside dried botanical branches, gentle natural morning window light, high-end editorial culinary photography, warm cream and deep olive tones." src="assets/images/editorial/pistachio_brioche_spiral.jpg">
+<div class="absolute top-3 left-3 bg-primary/80 backdrop-blur-md px-3 py-1 rounded-full text-on-primary font-label-caps text-label-caps">
+              Barista Choice
+            </div>
+</div>
+<div class="md:w-7/12 p-space-lg flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Orange Blossom Honey Latte</h3>
+<span class="font-title-md text-title-md text-tertiary shrink-0">$7.25</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-caps text-label-caps">GF</span>
+<span class="text-caption font-caption text-on-surface-variant">Single Origin Ethiopia • Wild Citrus</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+                Micro-lot cold pressed espresso infused with raw local orange blossom honey, topped with velvety steamed milk and crushed green cardamom cane sugar.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<span class="text-caption font-caption text-on-surface-variant italic">Served in hand-thrown stoneware</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">local_cafe</span>
+</div>
+</div>
+</article>
+<!-- Special 2 -->
+<article class="menu-item-card flex flex-col md:flex-row bg-surface-container-lowest rounded-xl overflow-hidden shadow-md group hover:shadow-xl transition-all duration-300" data-dietary="V">
+<div class="md:w-5/12 h-64 md:h-auto relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Rustic French tart filled with multicolored slow-roasted heirloom tomatoes, fresh purple basil leaves, and quenelles of creamy whipped mascarpone on a rustic linen cloth, warm timber table setting, soft diffuse golden daylight, gourmet culinary editorial presentation." src="assets/images/editorial/sourdough_fig_tartine.jpg">
+<div class="absolute top-3 left-3 bg-tertiary-container text-on-tertiary px-3 py-1 rounded-full font-label-caps text-label-caps">
+              Limited Harvest
+            </div>
+</div>
+<div class="md:w-7/12 p-space-lg flex flex-col justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Smoked Heirloom Tomato Tart</h3>
+<span class="font-title-md text-title-md text-tertiary shrink-0">$16.50</span>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<span class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-fixed-variant font-label-caps text-label-caps">V</span>
+<span class="text-caption font-caption text-on-surface-variant">Laminated Spelt Pastry • Fresh Herb Oil</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant pt-space-xs">
+                Slow-roasted heirloom tomatoes, aged balsamic reduction, herb-whipped basil mascarpone, flaky Maldon salt, finished with young sorrel leaves.
+              </p>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<span class="text-caption font-caption text-on-surface-variant italic">From Green Valley biodynamic growers</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">restaurant</span>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+<!-- Detailed Menu Sections -->
+<div class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface flex flex-col gap-space-xl">
+<div class="max-w-7xl mx-auto w-full flex flex-col gap-space-xl">
+<!-- Section A: Coffee & Espresso -->
+<section class="menu-category flex flex-col gap-space-lg" id="coffee-espresso">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs pb-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">01 • Extraction Lab</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Coffee &amp; Espresso</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant italic">Espresso pulled on La Marzocco KB90 • Custom Water Profile</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-space-xl gap-y-space-md">
+<!-- Item 1 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG GF DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Single Origin Pour-Over</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$6.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Rotating harvest lot from Yirgacheffe, Ethiopia. Prepared via Origami dripper. Tasting notes of fragrant bergamot, ripe white peach, and wild jasmine.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Washed Process</span>
+<span class="">•</span>
+<span class="">2,100 MASL</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Basil Signature Flat White</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$5.75</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Double ristretto extracted over sweet botanical steam, paired with velvety textured minor figures oat milk and a gentle aroma of fresh basil mist.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">House Roast</span>
+<span class="">•</span>
+<span class="">Rich Crema</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG GF DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cold Brew Tonic with Thyme</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$6.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Slow extracted 18-hour Colombian cold brew poured over Mediterranean sparkling citrus tonic, fresh bruised lemon thyme, and crystalline clear ice.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Low Acidity</span>
+<span class="">•</span>
+<span class="">Effervescent</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="V GF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cortado</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">V</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$4.75</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Equal 1:1 balance of espresso and gently textured whole milk from St. Benoit Creamery. Colombian washed microlot with praline and cocoa notes.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Gibraltar Glass</span>
+<span class="">•</span>
+<span class="">4.5 oz</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section B: Tea & Botanicals -->
+<section class="menu-category flex flex-col gap-space-lg pt-space-md" id="tea-botanicals">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs pb-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">02 • Herbal &amp; Ceremonial</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Tea &amp; Botanicals</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant italic">Loose Leaf Steeps • Japanese Heritage Whisking</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-space-xl gap-y-space-md">
+<!-- Item 1 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG GF DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Emerald Basil Infusion</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$5.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Fresh sweet Genovese and Thai basil steeped with tender lemongrass stalks, organic crushed ginger, and optional raw mountain honey.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Caffeine Free</span>
+<span class="">•</span>
+<span class="">Estate Harvest</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Ceremonial Grade Uji Matcha</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">DF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$6.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              First harvest stone-ground green tea leaves from Kyoto, hand-whisked with bamboo chasen, paired with warm house almond milk and maple hint.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">High Umami</span>
+<span class="">•</span>
+<span class="">L-Theanine Rich</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG GF DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Smoked Earl Grey &amp; Lavender</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$5.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Single estate black tea subtly cold-smoked over cherrywood, natural cold-pressed Italian bergamot oil, and French lavender flower buds.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Full Bodied</span>
+<span class="">•</span>
+<span class="">Floral Aromatics</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section C: Morning Bakehouse & Brunch -->
+<section class="menu-category flex flex-col gap-space-lg pt-space-md" id="bakehouse-brunch">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs pb-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">03 • Kitchen Provisions</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Morning Bakehouse &amp; Brunch</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant italic">All breads slow-fermented with our 7-year sourdough starter</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-space-xl gap-y-space-md">
+<!-- Item 1 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="V">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Wild Mushroom &amp; Herb Galette</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">V</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$14.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Flaky stone-ground spelt pastry filled with pan-roasted cremini, chanterelles, herb-whipped local ricotta cheese, and finished with fragrant cold-pressed basil oil.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Seasonal Forage</span>
+<span class="">•</span>
+<span class="">Warm Service</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="V">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Truffled Scrambled Eggs Brioche</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">V</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$17.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Pasture-raised soft curd eggs folded with black truffle butter, garden chives, and shaved aged parmesan on our house-baked toasted brioche loaf.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Local Organic Farm Eggs</span>
+<span class="">•</span>
+<span class="">Rich &amp; Velvety</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG GF DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Açaí &amp; Botanical Seed Bowl</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">GF</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">DF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$13.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Wild organic açaí blended thick with banana and almond milk, topped with toasted chia, golden hemp seeds, fresh tart passionfruit, and house buckwheat granola.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Naturally Sweet</span>
+<span class="">•</span>
+<span class="">Raw Antioxidants</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="VG DF">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Smashed Avocado &amp; Dukkah Toast</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">VG</span>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">DF</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$15.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Hass avocado crushed with Meyer lemon, quick-pickled shallots, spiced pistachio and sesame Egyptian dukkah, served on thick-cut grilled sourdough bread.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Crunch &amp; Citrus</span>
+<span class="">•</span>
+<span class="">Olive Oil Drizzle</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Section D: Sweet Finishes -->
+<section class="menu-category flex flex-col gap-space-lg pt-space-md" id="sweet-finishes">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-xs pb-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">04 • Pastry Cabinet</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">Sweet Finishes &amp; Confections</h2>
+</div>
+<span class="font-caption text-caption text-on-surface-variant italic">Baked fresh daily from 10:00</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-x-space-xl gap-y-space-md">
+<!-- Item 1 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="V">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Olive Oil &amp; Lemon Verbena Cake</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">V</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$8.50</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              Tender crumb made with cold-pressed Sicilian olive oil, infused with lemon verbena tea, dollop of whipped crème fraîche, and glazed candied citrus peel.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Light &amp; Moist</span>
+<span class="">•</span>
+<span class="">Citrus Zest</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="menu-item-row flex flex-col gap-1 p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow" data-dietary="V">
+<div class="flex items-baseline justify-between gap-4">
+<div class="flex items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Valrhona Dark Chocolate Tart</h3>
+<span class="px-2 py-0.5 rounded text-caption font-caption bg-secondary-container text-on-secondary-fixed-variant">V</span>
+</div>
+<span class="font-title-md text-title-md text-primary font-semibold">$9.00</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              70% Guanaja single-origin dark cocoa ganache in an espresso butter shell, sprinkled with hand-harvested flaked Maldon sea salt and rosemary oil droplets.
+            </p>
+<div class="flex items-center gap-3 text-caption font-caption text-secondary mt-1">
+<span class="">Intense &amp; Silky</span>
+<span class="">•</span>
+<span class="">Salted Finish</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Editorial Visual Interlude Mosaic -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Ethical Roastery</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Micro-Lot Partnerships</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          We pay an average of 45% above Fair Trade minimums directly to independent farm cooperatives in Colombia and Ethiopia.
+        </p>
+</div>
+<div class="h-64 rounded-xl overflow-hidden shadow-md">
+<img class="w-full h-full object-cover" data-alt="Close up aesthetic shot of ceramic cup filled with creamy flat white with delicate botanical latte art sitting on stone counter with scattered roasted coffee beans and a sprig of fresh sweet basil, soft side lighting, editorial culinary aesthetic." src="assets/images/editorial/cold_brew_tumbler.jpg">
+</div>
+<div class="flex flex-col gap-space-sm p-space-md bg-surface-container-lowest rounded-xl shadow-sm">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Heritage Grain</span>
+<h4 class="font-headline-sm text-headline-sm text-primary">Stone-Ground Milling</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          All bakehouse breads utilize ancient Einkorn and Spelt flours, stone-milled weekly to retain vital nutrients and digestible fibers.
+        </p>
+</div>
+</div>
+</section>
+<!-- Sourcing, Dietary Clarification & Weekend Brunch CTA -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Dietary Box & Allergen Note -->
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">eco</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-primary font-semibold">Dietary &amp; Allergen Guidance</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            Please inform our team of severe allergies prior to ordering. Our kitchen handles tree nuts, gluten, sesame, and dairy daily. Plant-based milk substitutes (organic barista oat or sprouted almond) are available for all beverages (+0.75). Produce sourced seasonally may alter garnishes without advance notice.
+          </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end">
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary">water_drop</span>
+<span class="text-caption font-caption text-on-surface">Oat &amp; Sprouted Almond Milk available (+0.75)</span>
+</div>
+<div class="flex items-center gap-3 p-3 bg-surface-container-lowest rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="text-caption font-caption text-on-surface">100% Cage-free pasture eggs</span>
+</div>
+</div>
+</div>
+<!-- Prominent Call to Action: Weekend Brunch Reservation -->
+<div class="bg-primary text-on-primary rounded-xl p-space-xl shadow-xl flex flex-col lg:flex-row items-center justify-between gap-space-lg relative overflow-hidden">
+<!-- Subtle botanical glow overlay -->
+<div class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-secondary/20 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs max-w-xl z-10 text-center lg:text-left">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-primary-fixed-dim">Savor the Weekend</span>
+<h2 class="font-headline-lg text-headline-lg text-primary-fixed">Book a Table for Weekend Brunch</h2>
+<p class="font-body-md text-body-md text-primary-fixed-dim/90">
+            Reservations open 14 days in advance for our greenhouse salon and garden patio. Walk-ins warmly welcomed for espresso bar seating.
+          </p>
+</div>
+<div class="flex flex-col sm:flex-row items-center gap-space-md shrink-0 z-10 w-full sm:w-auto justify-center">
+<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-surface-container text-primary font-label-md text-label-md px-space-lg py-space-sm hover:bg-surface-bright transition-colors shadow-sm" href="contact.html">
+            Reserve a Table
+          </a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center rounded-full bg-transparent text-primary-fixed border border-primary-fixed/40 font-label-md text-label-md px-space-lg py-space-sm hover:bg-primary-container transition-colors" href="contact.html">
+            Private Gatherings
+          </a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Interactive Dietary Filter Logic
+  document.addEventListener('DOMContentLoaded', () => {
+    const pills = document.querySelectorAll('.filter-pill');
+    const items = document.querySelectorAll('.menu-item-row, .menu-item-card');
+    const clearBtn = document.getElementById('clear-dietary-filter');
+
+    pills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        const filter = pill.getAttribute('data-filter');
+
+        // Update Pill UI
+        pills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        pill.classList.remove('bg-surface-container-high', 'text-on-surface');
+        pill.classList.add('bg-primary', 'text-on-primary');
+
+        if (filter !== 'all') {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+
+        // Filter Items
+        items.forEach(item => {
+          const itemTags = item.getAttribute('data-dietary') || '';
+          if (filter === 'all' || itemTags.includes(filter)) {
+            item.style.display = '';
+            item.style.opacity = '1';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        const allBtn = document.querySelector('[data-filter="all"]');
+        if (allBtn) allBtn.click();
+      });
+    }
+
+    // Active Category Scroll Highlight
+    const sections = document.querySelectorAll('.menu-category, #specials');
+    const navLinks = document.querySelectorAll('.category-link');
+
+    window.addEventListener('scroll', () => {
+      let currentId = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 180;
+        if (window.scrollY >= top) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('bg-secondary-container', 'text-on-secondary-fixed');
+        if (link.getAttribute('href') === `#${currentId}`) {
+          link.classList.add('bg-secondary-container', 'text-on-secondary-fixed');
+        }
+      });
+    });
+  });
+</script>
+</main>
+
+<footer class="w-full bg-primary text-surface-container border-t border-primary-container/30">
+  <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+      <div class="lg:col-span-4 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <img src="assets/images/brand/logo_basil.png" alt="Basil Café Logo" class="h-8 w-auto object-contain bg-surface-container-lowest px-1.5 py-0.5 rounded">
+          <span class="font-headline-md text-headline-md text-primary-fixed">Basil Café</span>
+        </div>
+        <p class="font-body-md text-body-md text-primary-fixed-dim/90 max-w-sm">Experience dining that feels like home. A sanctuary of slow mornings, seasonal flavors, and botanical warmth.</p>
+        <div class="flex items-center gap-space-md pt-space-xs text-secondary-fixed-dim">
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://instagram.com/basil_cafe_ddn" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <span class="text-primary-container">•</span>
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://facebook.com/basilcafeddn" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <span class="text-primary-container">•</span>
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://www.google.com/maps?cid=2483721361039784768" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        </div>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-sm">
+        <span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">Explore</span>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="index.html">Home</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="our-story.html">Our Story</a>
+          <a class="font-body-sm transition-colors text-primary-fixed font-medium" href="menu.html">Seasonal Menu</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="gallery.html">Visual Gallery</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="contact.html">Contact &amp; Visit</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="contact.html#reservation">Table Reservations</a>
+        </nav>
+      </div>
+      <div class="lg:col-span-5 flex flex-col gap-space-sm">
+        <span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">Hours &amp; Location</span>
+        <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+          <p class="text-surface-container font-title-md text-title-md">Shop 1 &amp; 2, 48 New Road, Race Course</p>
+          <p class="text-primary-fixed-dim/90">Opp. MKP College Entrance, Dehradun 248001</p>
+          <p class="pt-1">Daily: 10:00 AM – 10:30 PM (Wed from 10:30 AM)</p>
+          <p class="text-secondary-fixed">Tel / WhatsApp: +91 73007 76850</p>
+        </div>
+        <p class="mt-space-md font-caption text-caption text-primary-fixed-dim/60 italic">Dedicated parking area on-site. Wheelchair accessible dining hall &amp; restrooms.</p>
+      </div>
+    </div>
+    <div class="mt-space-xl pt-space-md border-t border-primary-container/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-primary-fixed-dim/70 font-caption text-caption">
+      <span>© 2024 Basil Café &amp; Restaurant. All rights reserved.</span>
+      <span>Authentic Basil Café provisions &amp; presentation preview.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/business-data.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

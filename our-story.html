@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Our Story | The Art of Slow Gathering | Basil Café</title>
+  <meta name="description" content="The heritage, botanical tenets, and culinary philosophy of Basil Café. A room where dining is an unhurried ritual.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container">
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface-container/90 backdrop-blur-md border-b border-primary-container/15">
+  <div class="h-20 w-full px-margin-mobile lg:px-margin flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-space-sm" aria-label="Basil Café Home">
+      <img alt="Basil Café Logo" class="h-8 w-auto object-contain" src="assets/images/brand/logo_basil.png">
+      <span class="font-headline-sm text-headline-sm text-primary tracking-tight">Basil Café</span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-space-lg">
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="index.html">Home</a>
+      <a aria-current="page" class="transition-colors py-1 text-primary font-title-md font-semibold border-b-2 border-primary" href="our-story.html">Our Story</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="menu.html">Menu</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="gallery.html">Gallery</a>
+      <a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface transition-colors py-1" href="contact.html">Contact &amp; Visit</a>
+    </nav>
+    <div class="flex items-center gap-space-md">
+      <a class="hidden sm:inline-flex items-center justify-center rounded-full bg-primary-container text-surface-container font-label-md text-label-md px-space-md py-space-sm hover:bg-primary transition-colors" href="contact.html">Reserve a Table</a>
+      <a href="contact.html" class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary-container transition-colors" aria-label="Visit Concierge">
+        <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+      </a>
+      <button id="mobile-menu-btn" class="lg:hidden p-2 rounded-lg text-primary hover:bg-surface-container transition-colors" aria-label="Open navigation menu">
+        <span class="material-symbols-outlined text-2xl">menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-drawer-backdrop" class="fixed inset-0 bg-primary/40 backdrop-blur-sm z-50 transition-opacity duration-300 opacity-0 pointer-events-none lg:hidden"></div>
+<aside id="mobile-drawer" class="fixed top-0 right-0 bottom-0 w-80 max-w-[85vw] bg-surface-container z-50 shadow-2xl transition-transform duration-300 transform translate-x-full lg:hidden flex flex-col justify-between p-6 overflow-y-auto">
+  <div class="flex flex-col gap-6">
+    <div class="flex items-center justify-between pb-4 border-b border-primary-container/15">
+      <div class="flex items-center gap-2">
+        <img alt="Basil Café Logo" class="h-7 w-auto object-contain" src="assets/images/brand/logo_basil.png">
+        <span class="font-headline-sm text-primary">Basil Café</span>
+      </div>
+      <button id="mobile-drawer-close" class="p-1.5 rounded-lg text-primary hover:bg-surface-container-high transition-colors" aria-label="Close menu">
+        <span class="material-symbols-outlined text-2xl">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-1.5">
+      <a href="index.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Home</a>
+      <a href="our-story.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors bg-primary-container text-surface-container font-semibold">Our Story</a>
+      <a href="menu.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Seasonal Menu</a>
+      <a href="gallery.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Visual Gallery</a>
+      <a href="contact.html" class="px-4 py-3 rounded-lg font-title-md text-title-md transition-colors text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface">Contact &amp; Visit</a>
+    </nav>
+  </div>
+  <div class="pt-6 border-t border-primary-container/15 flex flex-col gap-4">
+    <a href="contact.html" class="w-full inline-flex items-center justify-center rounded-full bg-primary-container text-surface-container font-label-md py-3 hover:bg-primary transition-colors shadow-sm">
+      Reserve a Table
+    </a>
+    <div class="flex flex-col gap-1 text-on-surface-variant font-caption">
+      <p class="font-medium text-primary">Shop 1 &amp; 2, 48 New Road, Dehradun</p>
+      <p>Daily: 10:00 AM – 10:30 PM</p>
+      <a href="tel:+917300776850" class="text-secondary font-medium hover:underline">+91 73007 76850</a>
+    </div>
+  </div>
+</aside>
+
+<main class="w-full pt-20 bg-surface">
+<div class="flex flex-col w-full">
+<!-- SECTION 1: EDITORIAL HEADER & STORY HERO -->
+<section class="relative w-full px-margin-mobile lg:px-margin pb-space-xl pt-space-lg bg-surface">
+<div class="max-w-7xl mx-auto flex flex-col">
+<!-- Vintage Editorial Volume & Date Marker -->
+<div class="flex items-center justify-between pb-space-md mb-space-md border-b border-primary/10">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary">Chronicle No. 04</span>
+<span class="text-primary/30">/</span>
+<span class="font-caption text-caption text-on-surface-variant italic">Artisan Quarter Journal</span>
+</div>
+<div class="hidden sm:flex items-center gap-space-sm font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">
+<span class="">Est. MMXXI</span>
+<span class="">•</span>
+<span class="">Slow Living &amp; Craft</span>
+</div>
+</div>
+<!-- Hero Typography Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-end mb-space-xl">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.25em] text-secondary">Prologue &amp; Heritage</span>
+<h1 class="font-display text-display text-primary tracking-tight leading-[1.08] capitalize">
+            The Art of <span class="italic font-display font-normal text-secondary">Slow Gathering</span>
+</h1>
+</div>
+<div class="lg:col-span-4 pb-space-xs">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+            How an obsession with wild herbs, heritage grain, and quiet mornings formed the foundation of Basil Café.
+          </p>
+</div>
+</div>
+<!-- Panoramic Sunlit Hero Frame -->
+<div class="relative w-full overflow-hidden rounded-xl bg-surface-container shadow-md">
+<div class="relative h-[420px] md:h-[580px] w-full">
+<img class="w-full h-full object-cover brightness-[0.98]" data-alt="Editorial architectural photo of an airy sunlit glasshouse cafe dining room with limewash walls, weathered oak harvest tables, abundant terracotta pots of sweet Italian basil, soft sheer natural linen curtains, and morning sun rays streaming through steel frame windows in a warm cream and olive aesthetic." src="assets/images/editorial/flat_white_swan_art.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row items-start sm:items-end justify-between gap-space-sm text-surface-bright">
+<div class="flex items-center gap-space-sm bg-primary/80 backdrop-blur-md px-space-md py-space-xs rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span>
+<span class="font-caption text-caption tracking-wide text-primary-fixed uppercase">Morning Light in the Atrium • 07:45 AM</span>
+</div>
+<span class="font-caption text-caption text-surface-container-high/90 italic hidden md:inline-block">48 New Road • Dehradun Sanctuary</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 2: CHAPTER 1 - THE ORIGIN & VISION -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container-low relative">
+<div class="max-w-7xl mx-auto">
+<!-- Chapter Marker -->
+<div class="flex items-center gap-space-md mb-space-lg">
+<span class="font-display text-headline-sm text-secondary italic">Chapter I</span>
+<div class="h-px bg-primary/15 flex-grow"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Genesis &amp; Conviction</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-start">
+<!-- Narrative Column (Left) -->
+<div class="lg:col-span-6 flex flex-col gap-space-md pr-0 lg:pr-space-md">
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight leading-tight">
+            A Seed Planted <br class="hidden sm:inline">in Stillness
+          </h2>
+<div class="flex flex-col gap-space-md font-body-lg text-body-lg text-on-surface leading-relaxed pt-space-xs">
+<p class="">
+              Before Basil was a sanctuary of stone, wood, and fragrant botanicals, it was a quiet rebellion. In a culinary landscape accelerated by rapid takeaway counters and mechanized convenience, we felt the persistent ache for a slower ritual—a room where an espresso was not an urgent fuel, but a meditative pause.
+            </p>
+<p class="text-on-surface-variant font-body-md text-body-md">
+              In the late autumn of 2021, we secured a neglected mid-century greenhouse adjoining an artisan joinery. With daylight pouring through high clerestory windows, we envisioned a space governed not by turnover times, but by natural botanical rhythms: the slow proofing of sourdough overnight, the steady extraction of washed Geisha coffee, and the hand-trimming of fresh sweet basil at sunrise.
+            </p>
+<p class="text-on-surface-variant font-body-md text-body-md">
+              Every detail—from the weight of our unglazed pottery to the low-frequency hum of ambient jazz—was chosen to decelerate pulse rates and restore hospitality to its most fundamental impulse: sheltering the neighborhood soul.
+            </p>
+</div>
+<!-- Micro Metrology Badge -->
+<div class="grid grid-cols-3 gap-space-sm pt-space-md mt-space-sm border-t border-primary/10">
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">36 hrs</span>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Dough Ferment</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">100%</span>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Regenerative Dairy</span>
+</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-primary block">18 Cultivars</span>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-wider">Wild Herbs</span>
+</div>
+</div>
+</div>
+<!-- Visual & Pull Quote Column (Right) -->
+<div class="lg:col-span-6 flex flex-col gap-space-lg lg:-mt-10">
+<div class="relative rounded-xl overflow-hidden shadow-lg bg-surface-container-lowest">
+<div class="h-80 sm:h-96 w-full">
+<img class="w-full h-full object-cover" data-alt="Editorial still life photograph of amber glass apothecary jars filled with dried botanical leaves, fresh cuttings of Thai and Genoa basil on a weathered travertine stone surface, antique brass scissors, and soft morning lighting with warm shadows." src="assets/images/editorial/barista_latte_pour.jpg">
+</div>
+<div class="p-space-sm bg-surface-container-lowest text-right">
+<span class="font-caption text-caption text-on-surface-variant italic">Interior window seating &amp; natural rattan dining gallery</span>
+</div>
+</div>
+<!-- Pull Quote Box -->
+<div class="relative bg-surface p-space-lg rounded-xl border-l-4 border-secondary shadow-sm">
+<span class="material-symbols-outlined text-secondary/30 text-4xl leading-none absolute top-4 right-4">format_quote</span>
+<p class="font-headline-md text-headline-md italic text-primary leading-snug mb-space-sm">
+              “We believe the simplest ingredients, honored with patience, create indelible memories.”
+            </p>
+<div class="flex items-center gap-space-sm">
+<div class="w-6 h-px bg-secondary"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-secondary font-semibold">The Kitchen Manifesto</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: PHILOSOPHY - FOUR CORE PILLARS -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl gap-space-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase tracking-[0.25em] text-secondary">Chapter II • Tenets</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">
+            Our Four Pillars of Purpose
+          </h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Every beverage poured and loaf scored adheres to a deliberate framework of ecological ethics and sensory discipline.
+        </p>
+</div>
+<!-- 4 Pillars Grid with Subtle Hairline Dividers -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Pillar 1 -->
+<div class="group relative flex flex-col p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-space-md border-b border-primary/10 mb-space-md">
+<span class="font-headline-md text-headline-md text-secondary font-light">I</span>
+<span class="material-symbols-outlined text-secondary text-2xl group-hover:rotate-12 transition-transform">potted_plant</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-space-xs">Botanical Craft</span>
+<h3 class="font-title-md text-title-md text-primary mb-space-sm">Botanical Reverence</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Infusing specialty drinks, syrups, and viennoiserie with tender botanicals clipped directly from our courtyard micro-garden moments before dawn.
+          </p>
+<div class="mt-space-lg pt-space-sm border-t border-primary/5 flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-caption text-on-surface-variant">Purple, Lemon &amp; Opal Basil</span>
+</div>
+</div>
+<!-- Pillar 2 -->
+<div class="group relative flex flex-col p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-space-md border-b border-primary/10 mb-space-md">
+<span class="font-headline-md text-headline-md text-secondary font-light">II</span>
+<span class="material-symbols-outlined text-secondary text-2xl group-hover:scale-110 transition-transform">hourglass_empty</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-space-xs">Natural Alchemy</span>
+<h3 class="font-title-md text-title-md text-primary mb-space-sm">Slow Fermentation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            36-hour sourdoughs and wild heritage levains nurtured with unbleached organic flours. Breads with crisp caramelised crusts and deep lactic sweetness.
+          </p>
+<div class="mt-space-lg pt-space-sm border-t border-primary/5 flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-caption text-on-surface-variant">Stoneground Khorasan &amp; Rye</span>
+</div>
+</div>
+<!-- Pillar 3 -->
+<div class="group relative flex flex-col p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-space-md border-b border-primary/10 mb-space-md">
+<span class="font-headline-md text-headline-md text-secondary font-light">III</span>
+<span class="material-symbols-outlined text-secondary text-2xl group-hover:-translate-y-1 transition-transform">eco</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-space-xs">Origin Integrity</span>
+<h3 class="font-title-md text-title-md text-primary mb-space-sm">Conscious Sourcing</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Single-estate, shade-grown micro-lots roasted gently on vintage cast drums. Paired with certified regenerative whole milk from local pasture herds.
+          </p>
+<div class="mt-space-lg pt-space-sm border-t border-primary/5 flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-caption text-on-surface-variant">Direct Trade • Zero Intermediary</span>
+</div>
+</div>
+<!-- Pillar 4 -->
+<div class="group relative flex flex-col p-space-lg bg-surface-container-lowest rounded-xl shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between pb-space-md border-b border-primary/10 mb-space-md">
+<span class="font-headline-md text-headline-md text-secondary font-light">IV</span>
+<span class="material-symbols-outlined text-secondary text-2xl group-hover:rotate-45 transition-transform">volunteer_activism</span>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest mb-space-xs">Human Connection</span>
+<h3 class="font-title-md text-title-md text-primary mb-space-sm">Warm Hospitality</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Care without stiffness. Table service conceived as though welcoming old companions into an unhurried family home with attentive warmth.
+          </p>
+<div class="mt-space-lg pt-space-sm border-t border-primary/5 flex items-center gap-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-caption text-caption text-on-surface-variant">Neighborhood Sanctuary</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 4: THE SPACE & ARCHITECTURE -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface-container relative">
+<div class="max-w-7xl mx-auto">
+<!-- Chapter Marker -->
+<div class="flex items-center gap-space-md mb-space-lg">
+<span class="font-display text-headline-sm text-secondary italic">Chapter III</span>
+<div class="h-px bg-primary/15 flex-grow"></div>
+<span class="font-label-caps text-label-caps uppercase tracking-widest text-outline">Materiality &amp; Space</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-space-xl items-center mb-space-xl">
+<div class="lg:col-span-5 flex flex-col gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.2em] text-secondary">Spatial Narrative</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Quiet Tactility in Every Surface
+          </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed pt-space-xs">
+            Our atelier was designed as an acoustic and sensory haven. Lime-washed plaster walls soften urban acoustics, creating an ambient quietude rarely found in modern city dining.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Every table was handcrafted from salvaged 180-year-old European white oak joists. The olive-glazed earthenware was thrown exclusively for Basil by ceramist Clara Lindqvist in nearby Dalston, each cup celebrating slight geological variances in glaze and fire.
+          </p>
+<!-- Architectural Spec Accordion -->
+<div class="mt-space-md p-space-md bg-surface rounded-lg border-l-2 border-secondary flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-caption font-label-caps uppercase tracking-wider text-secondary">
+<span class="">Materials Palette</span>
+<span class="">100% Provenance Recorded</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface font-medium">
+              Chalk Lime Plaster • Salvaged Bavarian Oak • Travertine Countertops • Belgian Raw Linen
+            </p>
+</div>
+</div>
+<!-- Two-image Juxtaposed Gallery -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-12 gap-gutter items-end">
+<!-- Close-up Texture Card -->
+<div class="sm:col-span-5 flex flex-col gap-space-xs">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high h-64 sm:h-72 shadow-md">
+<img class="w-full h-full object-cover" data-alt="Intimate macro photograph of a hand-thrown olive green glazed ceramic cappuccino cup resting on natural unbleached textured raw linen napkins, with micro foam art and warm directional lighting." src="assets/images/editorial/pistachio_brioche_spiral.jpg">
+</div>
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-caption text-caption text-secondary font-medium">Tactile Study 01</span>
+<span class="font-caption text-caption text-outline">Dalston Glaze No. 4</span>
+</div>
+</div>
+<!-- Wide Interior Garden View -->
+<div class="sm:col-span-7 flex flex-col gap-space-xs sm:-mb-6">
+<div class="relative overflow-hidden rounded-xl bg-surface-container-high h-80 sm:h-96 shadow-lg">
+<img class="w-full h-full object-cover" data-alt="Sun-drenched courtyard garden of an artisanal European cafe with brick pavers, climbing ivy, weathered wooden benches, guests reading quiet morning books, and tall terracotta planters filled with olive trees and basil." src="assets/images/editorial/sunlit_cafe_corner.jpg">
+</div>
+<div class="flex items-center justify-between px-space-xs"><span class="font-caption text-caption text-secondary font-medium">Botanical Dining Hall &amp; Booths</span><span class="font-caption text-caption text-outline">Artisan Interior</span></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 5: MEET THE HANDS BEHIND THE CRAFT -->
+<section class="w-full px-margin-mobile lg:px-margin py-space-xl bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<span class="font-label-caps text-label-caps uppercase tracking-[0.25em] text-secondary">Chapter IV • The Artisans</span>
+<h2 class="font-headline-lg text-headline-lg text-primary tracking-tight mt-space-xs">
+          The Hands Behind the Craft
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm">
+          A kitchen driven by curious minds, trained hands, and an unwavering humility toward regional ingredients.
+        </p>
+</div>
+<!-- Artisan Portraits Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter lg:gap-space-xl mb-space-xl">
+<!-- Artisan 1: Head Baker -->
+<div class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low rounded-xl shadow-sm hover:shadow-md transition-shadow items-center sm:items-start">
+<div class="w-40 h-48 flex-shrink-0 overflow-hidden rounded-lg shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial portrait of a master woman artisan baker dusting flour onto a wooden work table, wearing a dark olive linen apron, warm ambient dawn baker light, serene candid expression." src="assets/images/editorial/artisan_baker_flour.jpg">
+</div>
+<div class="flex flex-col justify-between h-full pt-space-xs">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Head of Hearth &amp; Grain</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-xs">Elena Vaneva</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">Crafting flame-baked garlic coriander naans and slow-simmered aromatic curries with freshly picked herbs from our botanical pantry daily.</p>
+</div>
+<div class="pt-space-md mt-space-xs border-t border-primary/10 flex items-center gap-space-xs text-primary font-caption text-caption italic">
+<span class="material-symbols-outlined text-[16px] text-secondary">bakery_dining</span>
+<span class="">“Grain must be listened to; it never lies.”</span>
+</div>
+</div>
+</div>
+<!-- Artisan 2: Master Roaster -->
+<div class="flex flex-col sm:flex-row gap-space-md p-space-md bg-surface-container-low rounded-xl shadow-sm hover:shadow-md transition-shadow items-center sm:items-start">
+<div class="w-40 h-48 flex-shrink-0 overflow-hidden rounded-lg shadow-inner bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Editorial candid portrait of a male specialty coffee roaster evaluating roasted coffee beans in a cupping tray, warm atmospheric cafe laboratory setting with warm directional natural light." src="assets/images/editorial/table_for_two_window.jpg">
+</div>
+<div class="flex flex-col justify-between h-full pt-space-xs">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">Master of Roasting &amp; Sourcing</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-space-xs">Julian Mercer</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs leading-relaxed">
+                Julian spends three months annually on single-family fincas across Huila and Yirgacheffe, selecting beans that accentuate floral, herbal, and citrus attributes under lighter roasts.
+              </p>
+</div>
+<div class="pt-space-md mt-space-xs border-t border-primary/10 flex items-center gap-space-xs text-primary font-caption text-caption italic">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_cafe</span>
+<span class="">“A clean cup reveals the hand of the farmer.”</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sincere Message on Hospitality Without Pretension -->
+<div class="relative bg-surface-container-lowest p-space-lg sm:p-space-xl rounded-xl shadow-sm max-w-4xl mx-auto border-t-2 border-primary">
+<div class="flex flex-col sm:flex-row gap-space-md items-start sm:items-center">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-2xl">favorite</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<h4 class="font-title-md text-title-md text-primary">A Note on Hospitality Without Pretension</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              While we are uncompromising about precision, we reject culinary elitism. Whether you arrive for an elaborate three-course brunch tasting or simply desire a cup of filter coffee and thirty uninterrupted minutes with your sketchbook, you will always be received with gentle kindness.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 6: INVITATION CTA (Warm Terracotta-Accented Panel) -->
+<section class="w-full px-margin-mobile lg:px-margin pb-space-xl pt-space-md bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="relative overflow-hidden rounded-xl bg-tertiary text-on-tertiary p-space-lg sm:p-space-xl shadow-xl">
+<!-- Subtle botanical decorative SVG overlay in background -->
+<div class="absolute -right-12 -bottom-16 opacity-10 pointer-events-none">
+<svg fill="currentColor" height="340" viewBox="0 0 100 100" width="340">
+<path d="M50 0 C60 30 70 40 100 50 C70 60 60 70 50 100 C40 70 30 60 0 50 C30 40 40 30 50 0 Z"></path>
+</svg>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-8 flex flex-col gap-space-sm">
+<div class="inline-flex items-center gap-space-xs px-space-sm py-1 rounded-full bg-tertiary-container/80 text-tertiary-fixed w-fit font-label-caps text-label-caps uppercase tracking-widest">
+<span class="">An Invitation</span>
+<span class="">•</span>
+<span class="">Join Our Table</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg tracking-tight text-white leading-tight">
+              Taste Our Story in Every Cup &amp; Crumb
+            </h2>
+<p class="font-body-lg text-body-lg text-tertiary-fixed-dim max-w-2xl leading-relaxed">
+              Our doors open with first light. Come early for warm cardamom-basil buns or linger late into the golden afternoon with our seasonal botanical pairings.
+            </p>
+</div>
+<div class="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-space-sm justify-end lg:items-end">
+<a class="w-full sm:w-auto lg:w-full inline-flex items-center justify-center gap-space-xs rounded bg-surface-container text-primary font-title-md text-title-md px-space-lg py-3 hover:bg-white transition-colors shadow-sm text-center font-medium" href="menu.html">
+<span class="">Explore Our Menu</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="w-full sm:w-auto lg:w-full inline-flex items-center justify-center gap-space-xs rounded bg-transparent border border-tertiary-fixed-dim/40 text-tertiary-fixed hover:bg-tertiary-container transition-colors font-title-md text-title-md px-space-lg py-3 text-center font-medium" href="contact.html">
+<span class="">Reserve a Table</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</a>
+</div>
+</div>
+<!-- Secondary Footnote inside CTA -->
+<div class="mt-space-lg pt-space-md border-t border-tertiary-container/60 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-xs text-tertiary-fixed-dim font-caption text-caption">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed">location_on</span>
+<span class="">Race Course • Dehradun • Kitchen active from 10:00 daily</span>
+</div>
+<span class="">Walk-ins always welcomed in the conservatory &amp; garden</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+
+<footer class="w-full bg-primary text-surface-container border-t border-primary-container/30">
+  <div class="w-full px-margin-mobile lg:px-margin py-space-xl">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter">
+      <div class="lg:col-span-4 flex flex-col gap-space-md">
+        <div class="flex items-center gap-space-sm">
+          <img src="assets/images/brand/logo_basil.png" alt="Basil Café Logo" class="h-8 w-auto object-contain bg-surface-container-lowest px-1.5 py-0.5 rounded">
+          <span class="font-headline-md text-headline-md text-primary-fixed">Basil Café</span>
+        </div>
+        <p class="font-body-md text-body-md text-primary-fixed-dim/90 max-w-sm">Experience dining that feels like home. A sanctuary of slow mornings, seasonal flavors, and botanical warmth.</p>
+        <div class="flex items-center gap-space-md pt-space-xs text-secondary-fixed-dim">
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://instagram.com/basil_cafe_ddn" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <span class="text-primary-container">•</span>
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://facebook.com/basilcafeddn" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <span class="text-primary-container">•</span>
+          <a class="font-label-caps text-label-caps hover:text-primary-fixed uppercase tracking-wider transition-colors" href="https://www.google.com/maps?cid=2483721361039784768" target="_blank" rel="noopener noreferrer">Google Maps</a>
+        </div>
+      </div>
+      <div class="lg:col-span-3 flex flex-col gap-space-sm">
+        <span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">Explore</span>
+        <nav class="flex flex-col gap-space-xs">
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="index.html">Home</a>
+          <a class="font-body-sm transition-colors text-primary-fixed font-medium" href="our-story.html">Our Story</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="menu.html">Seasonal Menu</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="gallery.html">Visual Gallery</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="contact.html">Contact &amp; Visit</a>
+          <a class="font-body-sm transition-colors text-primary-fixed-dim hover:text-primary-fixed" href="contact.html#reservation">Table Reservations</a>
+        </nav>
+      </div>
+      <div class="lg:col-span-5 flex flex-col gap-space-sm">
+        <span class="font-label-caps text-label-caps uppercase text-secondary-fixed tracking-widest">Hours &amp; Location</span>
+        <div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-primary-fixed-dim">
+          <p class="text-surface-container font-title-md text-title-md">Shop 1 &amp; 2, 48 New Road, Race Course</p>
+          <p class="text-primary-fixed-dim/90">Opp. MKP College Entrance, Dehradun 248001</p>
+          <p class="pt-1">Daily: 10:00 AM – 10:30 PM (Wed from 10:30 AM)</p>
+          <p class="text-secondary-fixed">Tel / WhatsApp: +91 73007 76850</p>
+        </div>
+        <p class="mt-space-md font-caption text-caption text-primary-fixed-dim/60 italic">Dedicated parking area on-site. Wheelchair accessible dining hall &amp; restrooms.</p>
+      </div>
+    </div>
+    <div class="mt-space-xl pt-space-md border-t border-primary-container/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-primary-fixed-dim/70 font-caption text-caption">
+      <span>© 2024 Basil Café &amp; Restaurant. All rights reserved.</span>
+      <span>Authentic Basil Café provisions &amp; presentation preview.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/business-data.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
