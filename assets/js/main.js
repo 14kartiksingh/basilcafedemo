@@ -144,46 +144,58 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Contact Page: Reservation Form Validation & Honest Notice
+  // 4. Contact Page: Reservation Form -> opens WhatsApp with a prefilled booking message
   const reservationForm = document.getElementById('reservationForm');
   const confirmationNotice = document.getElementById('confirmationNotice');
 
   if (reservationForm) {
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+      const t = new Date();
+      const today = new Date(t.getTime() - t.getTimezoneOffset() * 60000).toISOString().slice(0, 10);
+      dateInput.min = today;
+      if (!dateInput.value) dateInput.value = today;
+    }
+
     reservationForm.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const fullName = document.getElementById('fullName')?.value.trim() || 'Guest';
-      const guests = document.getElementById('partySize')?.value || '2';
-      const date = document.getElementById('date')?.value || 'Upcoming';
+      const val = (id) => (document.getElementById(id)?.value || '').trim();
+      const picked = (name) => {
+        const el = reservationForm.querySelector(`input[name="${name}"]:checked`);
+        if (!el) return '';
+        const label = el.closest('label');
+        const first = label ? label.querySelector('span') : null;
+        return first ? first.textContent.trim() : el.value;
+      };
+
+      let niceDate = val('date');
+      if (niceDate) {
+        const d = new Date(niceDate + 'T00:00:00');
+        if (!isNaN(d)) niceDate = d.toLocaleDateString('en-IN', { weekday: 'short', day: 'numeric', month: 'short', year: 'numeric' });
+      }
+
+      const lines = [
+        'Hello Basil Café, I would like to book a table.',
+        '',
+        'Name: ' + (val('fullName') || '-'),
+        'Phone: ' + (val('phone') || '-'),
+        'Guests: ' + (val('partySize') || '2'),
+        'Date: ' + (niceDate || '-'),
+        'Time: ' + (picked('timeSlot') || '-'),
+        'Seating: ' + (picked('seating') || 'No preference')
+      ];
+      if (val('email')) lines.push('Email: ' + val('email'));
+      if (val('notes')) lines.push('Note: ' + val('notes'));
+
+      const url = 'https://wa.me/917300776850?text=' + encodeURIComponent(lines.join('\n'));
 
       if (confirmationNotice) {
-        // Construct honest demonstration response
-        confirmationNotice.innerHTML = `
-          <div class="flex items-start gap-3">
-            <span class="material-symbols-outlined text-secondary text-2xl shrink-0 mt-0.5">info</span>
-            <div class="flex flex-col gap-1.5">
-              <p class="font-title-md text-title-md text-primary font-semibold">Enquiry Received for ${fullName} (${guests} Guests, ${date})</p>
-              <p class="text-on-surface-variant text-body-sm leading-relaxed">
-                <strong>Demonstration Notice:</strong> Online bookings are currently in preview mode and backend automated reservations are not yet connected. Your table is <em>not yet confirmed</em>.
-              </p>
-              <div class="flex flex-wrap items-center gap-3 pt-2">
-                <a href="https://wa.me/917300776850?text=Hello%20Basil%20Café,%20I%20would%20like%20to%20reserve%20a%20table%20for%20${guests}%20guests%20on%20${date}." 
-                   target="_blank" rel="noopener noreferrer"
-                   class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-secondary text-surface-container font-label-md hover:bg-primary transition-colors">
-                  <span class="material-symbols-outlined text-[16px]">chat</span>
-                  <span>Confirm instantly via WhatsApp</span>
-                </a>
-                <a href="tel:+917300776850" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-surface-container text-primary font-label-md hover:bg-surface-container-high transition-colors">
-                  <span class="material-symbols-outlined text-[16px]">call</span>
-                  <span>Call +91 73007 76850</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        `;
         confirmationNotice.classList.remove('hidden');
         confirmationNotice.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       }
+      const win = window.open(url, '_blank');
+      if (win) { win.opener = null; } else { window.location.href = url; }
     });
   }
 });
